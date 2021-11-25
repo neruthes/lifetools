@@ -1,0 +1,157 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Copyright (c) 2021 Neruthes.
+%
+% This document source code is released under <GNU GPL 2.0>.
+% See the LICENSE file in this repository.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,hmargin=15mm,tmargin=15mm,bmargin=10mm]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{calc}
+\usepackage{amsmath,xltxtra,xunicode}
+\usepackage{titlesec}
+\usepackage{fontspec}
+\usepackage{wasysym,oz,pxfonts,txfonts}
+
+
+\usepackage[PunctStyle=plain]{xeCJK}
+\XeTeXlinebreaklocale "zh" 
+\XeTeXlinebreakskip = 0pt plus 1pt 
+
+\setmainfont{Liberation Serif}
+\setromanfont{Liberation Serif}
+\setsansfont{Liberation Sans}
+\setmonofont{JetBrains Mono NL}
+\setCJKmainfont{Noto Sans CJK SC}
+\setCJKromanfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans CJK SC}
+
+\usepackage{listings}
+\usepackage{paralist}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{tocloft}
+\usepackage{longtable}
+\usepackage{tabu}
+\usepackage{makecell}
+\usepackage{qrcode}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{eso-pic}
+\usepackage{fontawesome5}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+
+
+
+% \title{医疗决定授权书}
+% \author{}
+% \date{2021-11-25 (Version 0.1.0)}
+
+\begin{document}
+\fancypagestyle{plain}{
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+	\chead{}
+	\lhead{}
+	\rhead{}
+	\cfoot{}
+	\lfoot{}
+	\rfoot{}
+}
+\pagestyle{plain}
+% \pagestyle{empty}
+\tabulinesep=10pt
+\raggedright
+\raggedbottom
+
+\sffamily
+
+
+
+\begin{minipage}{\linewidth}
+	\center
+	\huge\bfseries
+	\rmfamily
+
+	{紧急医疗决定授权书}
+\end{minipage}
+
+
+
+
+
+
+\section{个人信息}
+
+\begin{tabu} {|X|X[2.5]|X|X[2.5]|}
+	\hline
+	{姓名}     & {} & {国籍}         & {} \\
+	\hline
+	{身份证号} & {} & {其他证件编号} & {} \\
+	\hline
+	{血型}     & {} & {其他个人信息} & {} \\
+	\hline
+\end{tabu}
+
+\section{被授权人信息}
+
+\begin{tabu} {|X|X[2.5]|X|X[2.5]|}
+	\hline
+	{姓名}     & {} & {国籍}         & {} \\
+	\hline
+	{身份证号} & {} & {其他证件编号} & {} \\
+	\hline
+	{血型}     & {} & {其他个人信息} & {} \\
+	\hline
+\end{tabu}
+
+\normalsize
+
+\section{告医疗单位声明}
+
+\begin{enumerate}
+	\item 依照法律法规和当地卫生医疗监管管理单位或世界卫生组织制定的标准，
+	      在本人处于昏迷状态从而无法自行决定医疗方案时，无风险或超低风险的医疗方案均可直接进行。
+	\item 按照行业标准和执业经验，执业医师判断认为死亡率不高于 6\%、残疾率不高于 12\% 的急救方案，
+	      在本人处于昏迷状态从而无法自行决定急救方案时，均可直接进行；
+	      在此种情形下，除非属于重大医疗事故，本人及家属放弃以此类急救方案本身蕴含的风险导致的死亡、残疾等不良后果之理由向医疗单位索取民事赔偿的权利。
+	\item 本授权书有效期最长 2 年，如果超出则以 2 年为准。
+	\item 当医疗单位需要本人的「家属」做出医疗决定时，应当听取被授权人的决定。被授权人的权限等级高于「家属」。
+	      即使有人以家属名义出现在现场，医疗单位仍然应当按照本授权书的规定接受被授权人的决定。
+	      如医疗单位违反此条，本人必医闹。
+	\item 未尽事宜请参阅 ``\underline{https://github.com/neruthes/lifetools}''。
+\end{enumerate}
+
+\hrule
+
+\vspace{20pt}
+\begin{tabu} {|X|X[2.5]|X|X[2.5]|}
+	\hline
+	{签名处}       & {}                                           &
+	{签署日期}     & {}                                             \\
+	\hline
+	{有效期起始于} & {\hspace{6em}年\hspace{3em}月\hspace{3em}日} &
+	{有效期结束于} & {\hspace{6em}年\hspace{3em}月\hspace{3em}日}   \\
+	\hline
+\end{tabu}
+
+
+
+
+\vfill
+\footnotesize
+
+版权声明：本文档的源代码可以在 {https://github.com/neruthes/lifetools} 获取。文本与源代码以 GNU GPL 2.0 许可证发布。
+\end{document}

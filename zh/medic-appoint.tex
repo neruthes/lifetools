@@ -13,15 +13,14 @@
 
 \documentclass[a4paper,11pt]{article}
 \usepackage[a4paper,hmargin=15mm,tmargin=15mm,bmargin=10mm]{geometry}
-\usepackage[dvipsnames]{xcolor}
+% \usepackage[dvipsnames]{xcolor}
 \usepackage{calc}
-\usepackage{amsmath,xltxtra,xunicode}
-\usepackage{titlesec}
-\usepackage{fontspec}
-\usepackage{wasysym,oz,pxfonts,txfonts}
+% \usepackage{amsmath,xltxtra,xunicode}
+% \usepackage{titlesec}
+% \usepackage{wasysym,oz}
 
 
-\usepackage[PunctStyle=plain]{xeCJK}
+\usepackage[PunctStyle=plain,RubberPunctSkip=false]{xeCJK}
 \XeTeXlinebreaklocale "zh" 
 \XeTeXlinebreakskip = 0pt plus 1pt 
 
@@ -34,24 +33,18 @@
 \setCJKsansfont{Noto Sans CJK SC}
 \setCJKmonofont{Noto Sans CJK SC}
 
-\usepackage{listings}
-\usepackage{paralist}
+% \usepackage{paralist}
 \usepackage{enumerate}
 \usepackage{enumitem}
-\usepackage{tocloft}
-\usepackage{longtable}
 \usepackage{tabu}
-\usepackage{makecell}
-\usepackage{qrcode}
-\usepackage{graphicx}
-\usepackage{tikz}
-\usepackage{eso-pic}
-\usepackage{fontawesome5}
-\usepackage{multirow}
-\usepackage{multicol}
-\usepackage{ragged2e}
-\usepackage{tcolorbox}
-\usepackage{fancyhdr}
+
+
+
+
+
+\input{.tex/baselib.tex}
+
+
 
 
 
@@ -59,35 +52,22 @@
 % \author{}
 % \date{2021-11-25 (Version 0.1.0)}
 
+
+
+
+
+
+
+
 \begin{document}
-\fancypagestyle{plain}{
-	\renewcommand{\headrulewidth}{0pt}
-	\renewcommand{\footrulewidth}{0pt}
-	\chead{}
-	\lhead{}
-	\rhead{}
-	\cfoot{}
-	\lfoot{}
-	\rfoot{}
-}
-\pagestyle{plain}
-% \pagestyle{empty}
+\pagestyle{empty}
 \tabulinesep=10pt
-\raggedright
-\raggedbottom
-
-\sffamily
 
 
+\rmfamily
 
-\begin{minipage}{\linewidth}
-	\center
-	\huge\bfseries
-	\rmfamily
-
-	{紧急医疗决定授权书}
-\end{minipage}
-
+\bigtitle{紧急医疗决定授权书}
+\parindent=0pt
 
 
 
@@ -151,7 +131,5 @@
 
 
 \vfill
-\footnotesize
-
-版权声明：本文档的源代码可以在 {https://github.com/neruthes/lifetools} 获取。文本与源代码以 GNU GPL 2.0 许可证发布。
+\projcopyrightline
 \end{document}

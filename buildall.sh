@@ -5,4 +5,6 @@ for FN in en/* zh/*; do
     ntex "$FN" --oss --png
 done
 
-pushgithubdistweb
+if [[ "$USER" == neruthes ]]; then
+    pushgithubdistweb
+fi

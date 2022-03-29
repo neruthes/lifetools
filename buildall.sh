@@ -2,9 +2,9 @@
 
 for FN in en/* zh/*; do
     echo "Bulding $FN"
-    ntex "$FN" --oss --png
+    ntex "$FN" $@
 done
 
 if [[ "$USER" == neruthes ]]; then
-    pushgithubdistweb
+    pushgithubdistweb --wait
 fi
